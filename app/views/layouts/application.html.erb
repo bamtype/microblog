@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cop Watch</title>
+
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  
+
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	  <%= csrf_meta_tags %>
+			</head>
+		
+
+	<body>
+		<div class="container">
+			<div class="page-header">
+			
+				<nav>
+					<ul class="nav nav-pills pull-right">
+					  <li><%= link_to "About", "/about" %></li>	
+					  <li><%= link_to "Welcome", "/welcome" %></li>
+					  <li><%= link_to "Manage Posts", posts_url %></li>
+					  <li><%= link_to "Watchers", "/watchers" %></li>
+					  <li><%= link_to "Logout", logout_path, method: :destroy%></li>
+					</ul>
+	            <h1><%= link_to "Pig Patrol", "/" %> <small>*Because Pigs need Oversight Too*</small></h1>
+	        	</nav>
+		</div>
+
+				<div class="row">
+				   <div class= "col-md-6 col-md-offset-3">
+			     	 <%= yield %>
+			       </div>  
+		        </div>
+
+		</div>
+		<%= flash[:notice] if flash[:notice] %>
+		<%= flash[:alert] if flash[:alert] %>
+	 	
+
+	</body>
+</html>

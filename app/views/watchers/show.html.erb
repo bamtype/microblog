@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @watcher.username %>
+</p>
+
+<p>
+  <strong>Fname:</strong>
+  <%= @watcher.fname %>
+</p>
+
+<p>
+  <strong>Lname:</strong>
+  <%= @watcher.lname %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @watcher.password %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @watcher.email %>
+</p>
+
+<%= link_to 'Edit', edit_watcher_path(@watcher) %> |
+<%= link_to 'Welcome', welcome_path %>

@@ -1,0 +1,15 @@
+
+ 	
+
+<% if notice.present? %>
+
+<p class="alert alert-info">
+	<%= notice %></p>
+
+<p>
+	
+	
+	<h2> <%= @post.watcher %> </h2>
+<% end %>
+ 
+ <%= render 'post', post: @post %>

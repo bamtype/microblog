@@ -1,0 +1,34 @@
+
+<div>
+	<%= form_tag '/login', method: :post do %>
+<p  class="pemail">
+	<%= label_tag :email%>
+	<%= email_field_tag :email %>
+</p>
+<p class="ppassword">
+	<%= label_tag :password %>
+	<%= password_field_tag :password %>
+</p>
+	<%= submit_tag :Login, :class => 'submitbtn' %>
+	
+<% end %>
+
+
+
+
+
+
+
+	<!-- 
+	<form action="/welcome" method="get">
+	  
+	  Username: <input type="text" name="username">
+	  <br> <br><br>
+
+	  Password: <input type="password" name="password">
+	  <br><br>
+
+	  <input type="submit" value="Submit">
+	</form> -->
+
+</div>

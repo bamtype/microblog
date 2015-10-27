@@ -1,0 +1,14 @@
+
+
+	<ul class="nav nav-pills pull-right">
+		<li><%= link_to 'New Post', new_post_path %></li>
+	</ul>
+
+<% @posts.each do |post| %>
+  
+
+   <%= render "post", post: post%>
+		<h2>
+			<%= post.title %>
+		</h2>
+<% end %>
